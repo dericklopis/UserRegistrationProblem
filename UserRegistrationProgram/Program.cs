@@ -23,6 +23,10 @@ namespace UserRegistrationProgram
             Console.WriteLine("Enter Email: ");
             string email = Console.ReadLine();
             userValidation.ValidationFirstName(email);
+
+            Console.WriteLine("Enter PhoneNumber: ");
+            string phonenumber = Console.ReadLine();
+            userValidation.ValidationPhoneNumber(phonenumber);
         }
     }
 }
