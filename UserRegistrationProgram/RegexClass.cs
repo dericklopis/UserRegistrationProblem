@@ -55,5 +55,15 @@ namespace UserRegistrationProgram
             Console.WriteLine(result);
             Console.ReadLine();
         }
+        //UC6
+        //Should  have at least 1 Upper Case
+        public const string UPPERCASE_REGEX = "^[A-Z][a-z]{7}$";
+        public void ValidationUppercase(string Uppercase)
+        {
+            Regex regex = new Regex(UPPERCASE_REGEX);
+            bool result = regex.IsMatch(Uppercase);
+            Console.WriteLine(result);
+            Console.ReadLine();
+        }
     }
 }
