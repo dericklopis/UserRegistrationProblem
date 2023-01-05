@@ -26,5 +26,12 @@ namespace UserRegistrationProgram
             Console.WriteLine(result);
             Console.ReadLine();
         }
+        public const string EMAIL_REGEX = "^[a-z0-9]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}$";
+        public void ValidationEmail(string email)
+        {
+            Regex regex = new Regex(EMAIL_REGEX);
+            bool result = regex.IsMatch(email);
+            Console.WriteLine(result);
+        }
     }
 }

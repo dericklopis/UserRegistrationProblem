@@ -10,7 +10,6 @@ namespace UserRegistrationProgram
     {
         static void Main(string[] args)
         {
-
             Console.WriteLine("Welcome to User Registration Problems Statement Using REGEX");
             RegexClass userValidation = new RegexClass();
             Console.WriteLine("Enter The First Name: ");
@@ -20,6 +19,10 @@ namespace UserRegistrationProgram
             Console.WriteLine("Enter The Last Name: ");
             string lastname = Console.ReadLine();
             userValidation.ValidationLastName(lastname);
+
+            Console.WriteLine("Enter Email: ");
+            string email = Console.ReadLine();
+            userValidation.ValidationFirstName(email);
         }
     }
 }
