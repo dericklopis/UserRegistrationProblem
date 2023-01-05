@@ -10,21 +10,16 @@ namespace UserRegistrationProgram
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("welcome To Regex User Registration Problem");
-            Console.ReadLine();
-            RegexClass code = new RegexClass();
-            Console.WriteLine("1 - Enter First Name");
-            Console.WriteLine("2 - Enter Last Name");
-            int select = Convert.ToInt32(Console.ReadLine());
-            switch (select)
-            {
-                case 1:
-                    Console.WriteLine("Enter First Name");
-                    Console.ReadLine();
-                    string firstName = Console.ReadLine();
-                    code.name(firstName);
-                    break;
-            }
+
+            Console.WriteLine("Welcome to User Registration Problems Statement Using REGEX");
+            RegexClass userValidation = new RegexClass();
+            Console.WriteLine("Enter The First Name: ");
+            string firstname = Console.ReadLine();
+            userValidation.ValidationFirstName(firstname);
+
+            Console.WriteLine("Enter The Last Name: ");
+            string lastname = Console.ReadLine();
+            userValidation.ValidationLastName(lastname);
         }
     }
 }

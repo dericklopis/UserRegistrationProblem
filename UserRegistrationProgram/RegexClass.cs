@@ -7,20 +7,24 @@ using System.Threading.Tasks;
 
 namespace UserRegistrationProgram
 {
-    internal class RegexClass
+    public class RegexClass
     {
-        public void name(string name)
+        public const string FIRST_NAME_REGEX = "^[A-Z][a-zA-Z]{2}$";
+        public void ValidationFirstName(string firstname)
         {
-            const string NAME = "^[A-Z]{1}[a-z]{2,}$";
-
-            if (Regex.IsMatch(name, NAME))
-            {
-                Console.WriteLine(name + " is a valid Name");
-                return;
-            }
-            Console.WriteLine(name + " is a invalid Name");
+            Regex regex = new Regex(FIRST_NAME_REGEX);
+            bool result = regex.IsMatch(firstname);
+            Console.WriteLine(result);
+        }
+        //UC2
+        //LastName the First Letter Should Capital and minimum 3 Character
+        public const string LASTNAME_REGEX = "^[A-Z][a-zA-Z]{2}$";
+        public void ValidationLastName(string lastname)
+        {
+            Regex regex = new Regex(LASTNAME_REGEX);
+            bool result = regex.IsMatch(lastname);
+            Console.WriteLine(result);
             Console.ReadLine();
-            return;
         }
     }
 }
