@@ -65,5 +65,15 @@ namespace UserRegistrationProgram
             Console.WriteLine(result);
             Console.ReadLine();
         }
+        //UC7
+        //Should  have at least 1 numeric number in password
+        public const string NUMERICPASSWORD_REGEX = "^[a-z0-9A-Z]{8}$";
+        public void ValidationNumericPassword(string numericpassword)
+        {
+            Regex regex = new Regex(NUMERICPASSWORD_REGEX);
+            bool result = regex.IsMatch(numericpassword);
+            Console.WriteLine(result);
+            Console.ReadLine();
+        }
     }
 }
